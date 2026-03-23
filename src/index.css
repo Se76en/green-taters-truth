@@ -32,7 +32,7 @@
     --input: 40 15% 85%;
     --ring: 142 40% 28%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Source Sans 3', system-ui, sans-serif;
@@ -48,47 +48,78 @@
   }
 
   .dark {
-    --background: 150 15% 8%;
-    --foreground: 40 20% 92%;
+    --background: 150 18% 8%;
+    --foreground: 40 25% 92%;
 
-    --card: 150 12% 12%;
-    --card-foreground: 40 20% 92%;
+    --card: 150 14% 12%;
+    --card-foreground: 40 25% 92%;
 
-    --popover: 150 15% 8%;
-    --popover-foreground: 40 20% 92%;
+    --popover: 150 18% 8%;
+    --popover-foreground: 40 25% 92%;
 
-    --primary: 142 45% 42%;
-    --primary-foreground: 150 15% 8%;
+    --primary: 142 42% 46%;
+    --primary-foreground: 150 18% 8%;
 
     --secondary: 150 10% 18%;
-    --secondary-foreground: 40 20% 85%;
+    --secondary-foreground: 40 20% 88%;
 
     --muted: 150 10% 16%;
-    --muted-foreground: 40 10% 55%;
+    --muted-foreground: 40 12% 62%;
 
-    --accent: 35 55% 55%;
-    --accent-foreground: 150 15% 8%;
+    --accent: 35 70% 55%;
+    --accent-foreground: 150 18% 8%;
 
-    --destructive: 0 65% 50%;
-    --destructive-foreground: 40 20% 92%;
+    --destructive: 0 68% 55%;
+    --destructive-foreground: 40 25% 92%;
 
     --border: 150 10% 20%;
     --input: 150 10% 20%;
-    --ring: 142 45% 42%;
+    --ring: 142 42% 46%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground transition-colors duration-300;
+    @apply bg-background text-foreground antialiased;
     font-family: var(--font-body);
+    background-image:
+      radial-gradient(circle at top left, hsl(var(--primary) / 0.08), transparent 28%),
+      radial-gradient(circle at bottom right, hsl(var(--accent) / 0.08), transparent 24%);
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
+  }
+
+  a {
+    @apply transition-colors;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .section-shell {
+    @apply max-w-6xl mx-auto px-6;
+  }
+
+  .glass-panel {
+    @apply bg-background/80 backdrop-blur-md border border-border;
+  }
+
+  .soft-card {
+    @apply rounded-3xl border border-border bg-card/90 shadow-sm;
+  }
+
+  .hero-shadow {
+    box-shadow: 0 30px 120px hsl(var(--foreground) / 0.15);
   }
 }
