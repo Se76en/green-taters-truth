@@ -357,8 +357,24 @@ const Index = () => {
 
       <footer className="border-t border-border bg-background/60 py-8 text-center text-sm text-muted-foreground">
         <div className="section-shell">
-          <p>Site informativ despre solanină, toxicitatea ei și contextul biologic al producerii în plante.</p>
-          <p className="mt-2">© 2026 — Realizat cu Lovable</p>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="text-muted-foreground"
+          >
+            Realizat de{" "}
+            <motion.span
+              className="font-bold text-primary"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              Iurașcu Iulian
+            </motion.span>
+          </motion.p>
         </div>
       </footer>
     </div>
