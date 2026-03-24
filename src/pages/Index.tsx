@@ -333,7 +333,7 @@ const Index = () => {
                   steroli și apoi în alcaloizi steroizi.
                 </p>
                 <div className="mt-6 rounded-3xl border border-border bg-background/70 p-6 font-mono text-sm leading-8 text-foreground">
-                  Acetil-CoA → Mevalonat → IPP / DMAPP → FPP → Squalen → Lanosterol → Colesterol → Solanidină → α-Solanină
+                  Colesterol → Solanidină → <strong>α-Solanină</strong>
                 </div>
               </div>
               <motion.div className="space-y-4" initial="hidden" whileInView="visible" viewport={vp} variants={stagger}>
