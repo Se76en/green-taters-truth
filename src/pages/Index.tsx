@@ -270,10 +270,15 @@ const Index = () => {
           </motion.div>
           <motion.div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3" initial="hidden" whileInView="visible" viewport={vp} variants={stagger}>
             {plants.map((plant) => (
-              <motion.article key={plant.name} variants={fadeUp} transition={{ duration: 0.5 }} className="soft-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                <h3 className="text-2xl font-bold text-foreground">{plant.name}</h3>
-                <p className="mt-1 text-sm italic text-primary">{plant.latin}</p>
-                <p className="mt-4 leading-relaxed text-muted-foreground">{plant.detail}</p>
+              <motion.article key={plant.name} variants={fadeUp} transition={{ duration: 0.5 }} className="soft-card overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                {plant.img && (
+                  <img src={plant.img} alt={plant.name} className="h-44 w-full object-cover" loading="lazy" width={768} height={512} />
+                )}
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-foreground">{plant.name}</h3>
+                  <p className="mt-1 text-sm italic text-primary">{plant.latin}</p>
+                  <p className="mt-4 leading-relaxed text-muted-foreground">{plant.detail}</p>
+                </div>
               </motion.article>
             ))}
           </motion.div>
