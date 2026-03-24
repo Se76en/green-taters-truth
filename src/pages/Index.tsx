@@ -1,7 +1,7 @@
 // Glycoalkaloids Research Project
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import heroImage from "@/assets/green-potatoes-hero.jpg";
+import heroImage from "@/assets/green-potato-hero.png";
 import structureImage from "@/assets/solanine-structure.png";
 import greenTomatoesImg from "@/assets/green-tomatoes.jpg";
 import eggplantsImg from "@/assets/eggplants.jpg";
