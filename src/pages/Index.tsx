@@ -355,7 +355,7 @@ const Index = () => {
             {[
               { emoji: "🥔", fact: "Un cartof complet verde poate conține până la 100 mg de solanină — suficient pentru a provoca simptome la un copil." },
               { emoji: "🌡️", fact: "Solanina rezistă la temperaturi de gătire obișnuite. Nici fierberea, nici prăjirea nu o elimină complet — se descompune abia la ~243°C." },
-              { emoji: "🍅", fact: "Tomatele verzi conțin tomatină, un „văr chimic" al solaninei. Pe măsură ce roșia se coace, nivelul scade dramatic." },
+              { emoji: "🍅", fact: "Tomatele verzi conțin tomatină, un 'văr chimic' al solaninei. Pe măsură ce roșia se coace, nivelul scade dramatic." },
               { emoji: "⚔️", fact: "În Evul Mediu, cartofii erau priviți cu suspiciune în Europa. Unii credeau că provoacă lepră, tocmai din cauza efectelor toxice ale solaninei." },
               { emoji: "🛡️", fact: "Solanina este de fapt un pesticid natural — planta o produce pentru a se apăra de insecte, ciuperci și animale erbivore." },
               { emoji: "🔬", fact: "Cercetările recente sugerează că solanina ar putea avea proprietăți anti-tumorale, dar dozele necesare sunt prea aproape de cele toxice." },
