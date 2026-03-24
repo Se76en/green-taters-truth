@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import heroImage from "@/assets/green-potatoes-hero.jpg";
 import structureImage from "@/assets/solanine-structure.png";
+import greenTomatoesImg from "@/assets/green-tomatoes.jpg";
+import eggplantsImg from "@/assets/eggplants.jpg";
+import nightshadeImg from "@/assets/nightshade.jpg";
+import greenPotatoSproutsImg from "@/assets/green-potato-sprouts.jpg";
 import {
   AlertTriangle, BookOpen, ChevronDown, FlaskConical,
   Leaf, Menu, Microscope, Moon, Skull, Sun, X, Zap,
@@ -20,10 +24,10 @@ const sections = [
 ];
 
 const plants = [
-  { name: "Cartoful", latin: "Solanum tuberosum", detail: "Sursa principală de expunere. Solanina se concentrează în coaja verde, germeni și în zonele expuse la lumină." },
-  { name: "Tomatele verzi", latin: "Solanum lycopersicum", detail: "Conțin tomatină, un alcaloid înrudit cu solanina, în cantități mai mari înainte de coacere." },
-  { name: "Pătlăgelele vinete", latin: "Solanum melongena", detail: "Pot conține alcaloizi steroizi înruditi, dar în general la niveluri mici." },
-  { name: "Zărnacica", latin: "Solanum dulcamara", detail: "Plantă toxică ce conține solanină și alți compuși asemănători în frunze și fructe." },
+  { name: "Cartoful", latin: "Solanum tuberosum", detail: "Sursa principală de expunere. Solanina se concentrează în coaja verde, germeni și în zonele expuse la lumină.", img: greenPotatoSproutsImg },
+  { name: "Tomatele verzi", latin: "Solanum lycopersicum", detail: "Conțin tomatină, un alcaloid înrudit cu solanina, în cantități mai mari înainte de coacere.", img: greenTomatoesImg },
+  { name: "Pătlăgelele vinete", latin: "Solanum melongena", detail: "Pot conține alcaloizi steroizi înruditi, dar în general la niveluri mici.", img: eggplantsImg },
+  { name: "Zărnacica", latin: "Solanum dulcamara", detail: "Plantă toxică ce conține solanină și alți compuși asemănători în frunze și fructe.", img: nightshadeImg },
   { name: "Lăcrămioarele negre", latin: "Solanum nigrum", detail: "Fructele necoapte și alte părți ale plantei pot avea concentrații relevante de glicoalcaloizi." },
   { name: "Mătrăguna și Datura", latin: "Atropa belladonna / Datura stramonium", detail: "Nu sunt surse tipice de solanină, dar aparțin aceleiași familii și produc alți alcaloizi foarte toxici." },
 ];
@@ -266,10 +270,15 @@ const Index = () => {
           </motion.div>
           <motion.div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3" initial="hidden" whileInView="visible" viewport={vp} variants={stagger}>
             {plants.map((plant) => (
-              <motion.article key={plant.name} variants={fadeUp} transition={{ duration: 0.5 }} className="soft-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                <h3 className="text-2xl font-bold text-foreground">{plant.name}</h3>
-                <p className="mt-1 text-sm italic text-primary">{plant.latin}</p>
-                <p className="mt-4 leading-relaxed text-muted-foreground">{plant.detail}</p>
+              <motion.article key={plant.name} variants={fadeUp} transition={{ duration: 0.5 }} className="soft-card overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                {plant.img && (
+                  <img src={plant.img} alt={plant.name} className="h-44 w-full object-cover" loading="lazy" width={768} height={512} />
+                )}
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-foreground">{plant.name}</h3>
+                  <p className="mt-1 text-sm italic text-primary">{plant.latin}</p>
+                  <p className="mt-4 leading-relaxed text-muted-foreground">{plant.detail}</p>
+                </div>
               </motion.article>
             ))}
           </motion.div>
@@ -324,7 +333,7 @@ const Index = () => {
                   steroli și apoi în alcaloizi steroizi.
                 </p>
                 <div className="mt-6 rounded-3xl border border-border bg-background/70 p-6 font-mono text-sm leading-8 text-foreground">
-                  Acetil-CoA → Mevalonat → IPP / DMAPP → FPP → Squalen → Lanosterol → Colesterol → Solanidină → α-Solanină
+                  Colesterol → Solanidină → <strong>α-Solanină</strong>
                 </div>
               </div>
               <motion.div className="space-y-4" initial="hidden" whileInView="visible" viewport={vp} variants={stagger}>
@@ -334,6 +343,28 @@ const Index = () => {
                 <motion.div variants={fadeLeft} transition={{ duration: 0.4 }}><FactorCard title="Germinare" text="Germenii și zonele din jurul lor pot concentra cantități mari de solanină." /></motion.div>
               </motion.div>
             </div>
+          </motion.div>
+        </section>
+
+        {/* ── ȘTIAȚI CĂ? ── */}
+        <section className="section-shell py-12 md:py-20">
+          <motion.div initial="hidden" whileInView="visible" viewport={vp} variants={fadeUp} transition={{ duration: 0.5 }}>
+            <SectionTitle icon={<Zap className="h-6 w-6" />} title="Știați că?" />
+          </motion.div>
+          <motion.div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3" initial="hidden" whileInView="visible" viewport={vp} variants={stagger}>
+            {[
+              { emoji: "🥔", fact: "Un cartof complet verde poate conține până la 100 mg de solanină — suficient pentru a provoca simptome la un copil." },
+              { emoji: "🌡️", fact: "Solanina rezistă la temperaturi de gătire obișnuite. Nici fierberea, nici prăjirea nu o elimină complet — se descompune abia la ~243°C." },
+              { emoji: "🍅", fact: "Tomatele verzi conțin tomatină, un 'văr chimic' al solaninei. Pe măsură ce roșia se coace, nivelul scade dramatic." },
+              { emoji: "⚔️", fact: "În Evul Mediu, cartofii erau priviți cu suspiciune în Europa. Unii credeau că provoacă lepră, tocmai din cauza efectelor toxice ale solaninei." },
+              { emoji: "🛡️", fact: "Solanina este de fapt un pesticid natural — planta o produce pentru a se apăra de insecte, ciuperci și animale erbivore." },
+              { emoji: "🔬", fact: "Cercetările recente sugerează că solanina ar putea avea proprietăți anti-tumorale, dar dozele necesare sunt prea aproape de cele toxice." },
+            ].map((item, i) => (
+              <motion.div key={i} variants={fadeUp} transition={{ duration: 0.5 }} className="soft-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                <span className="text-3xl">{item.emoji}</span>
+                <p className="mt-3 leading-relaxed text-muted-foreground">{item.fact}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </section>
 
