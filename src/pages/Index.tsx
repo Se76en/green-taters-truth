@@ -5,7 +5,7 @@ import structureImage from "@/assets/solanine-structure.png";
 import greenTomatoesImg from "@/assets/green-tomatoes.jpg";
 import eggplantsImg from "@/assets/eggplants.jpg";
 import greenPotatoSproutsImg from "@/assets/green-potato-sprouts.jpg";
-import glycoalkaloidImg from "@/assets/glycoalkaloid-structure.jpg";
+
 import tomatineVsSolanineImg from "@/assets/tomatine-vs-solanine.png";
 import {
   AlertTriangle, BookOpen, ChevronDown, FlaskConical,
