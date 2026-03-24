@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import heroImage from "@/assets/green-potatoes-hero.jpg";
 import structureImage from "@/assets/solanine-structure.png";
+import greenTomatoesImg from "@/assets/green-tomatoes.jpg";
+import eggplantsImg from "@/assets/eggplants.jpg";
+import nightshadeImg from "@/assets/nightshade.jpg";
+import greenPotatoSproutsImg from "@/assets/green-potato-sprouts.jpg";
 import {
   AlertTriangle, BookOpen, ChevronDown, FlaskConical,
   Leaf, Menu, Microscope, Moon, Skull, Sun, X, Zap,
