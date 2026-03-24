@@ -14,6 +14,7 @@ import {
 /* ───────── data ───────── */
 
 const sections = [
+  { id: "glicoalcaloid", label: "Glicoalcaloid" },
   { id: "despre", label: "Ce este?" },
   { id: "structura", label: "Structură" },
   { id: "mecanism", label: "Mecanism" },
