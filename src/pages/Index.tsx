@@ -400,7 +400,7 @@ const Index = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              Iurașcu Iulian
+              Iurașcu Iulian, Chiribau Elena si Manole Ana
             </motion.span>
           </motion.p>
         </div>
