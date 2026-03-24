@@ -1,3 +1,4 @@
+// Glycoalkaloids Research Project
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import heroImage from "@/assets/green-potatoes-hero.jpg";
