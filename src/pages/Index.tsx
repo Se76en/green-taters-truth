@@ -346,6 +346,28 @@ const Index = () => {
           </motion.div>
         </section>
 
+        {/* ── ȘTIAȚI CĂ? ── */}
+        <section className="section-shell py-12 md:py-20">
+          <motion.div initial="hidden" whileInView="visible" viewport={vp} variants={fadeUp} transition={{ duration: 0.5 }}>
+            <SectionTitle icon={<Zap className="h-6 w-6" />} title="Știați că?" />
+          </motion.div>
+          <motion.div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3" initial="hidden" whileInView="visible" viewport={vp} variants={stagger}>
+            {[
+              { emoji: "🥔", fact: "Un cartof complet verde poate conține până la 100 mg de solanină — suficient pentru a provoca simptome la un copil." },
+              { emoji: "🌡️", fact: "Solanina rezistă la temperaturi de gătire obișnuite. Nici fierberea, nici prăjirea nu o elimină complet — se descompune abia la ~243°C." },
+              { emoji: "🍅", fact: "Tomatele verzi conțin tomatină, un „văr chimic" al solaninei. Pe măsură ce roșia se coace, nivelul scade dramatic." },
+              { emoji: "⚔️", fact: "În Evul Mediu, cartofii erau priviți cu suspiciune în Europa. Unii credeau că provoacă lepră, tocmai din cauza efectelor toxice ale solaninei." },
+              { emoji: "🛡️", fact: "Solanina este de fapt un pesticid natural — planta o produce pentru a se apăra de insecte, ciuperci și animale erbivore." },
+              { emoji: "🔬", fact: "Cercetările recente sugerează că solanina ar putea avea proprietăți anti-tumorale, dar dozele necesare sunt prea aproape de cele toxice." },
+            ].map((item, i) => (
+              <motion.div key={i} variants={fadeUp} transition={{ duration: 0.5 }} className="soft-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                <span className="text-3xl">{item.emoji}</span>
+                <p className="mt-3 leading-relaxed text-muted-foreground">{item.fact}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </section>
+
         {/* ── BIBLIOGRAFIE ── */}
         <section id="bibliografie" className="section-shell py-12 pb-24 md:py-20 md:pb-28">
           <motion.div initial="hidden" whileInView="visible" viewport={vp} variants={fadeUp} transition={{ duration: 0.5 }}>
