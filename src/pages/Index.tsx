@@ -176,6 +176,7 @@ const Index = () => {
               <SectionTitle icon={<Leaf className="h-6 w-6" />} title="Ce este solanina?" />
               <div className="mt-4 space-y-5 text-lg leading-relaxed text-foreground/85">
                 <p><strong>Solanina</strong> este un <em>glicoalcaloid</em> toxic produs natural de anumite plante din familia <strong>Solanaceae</strong>. Formula moleculară este <strong>C₄₅H₇₃NO₁₅</strong>, iar compusul are rol defensiv împotriva insectelor, fungilor și erbivorelor.</p>
+                <p><strong>Rolul în plantă:</strong> Solanina funcționează ca un <em>pesticid natural</em>. Planta o produce în frunze, fructe necoapte și tuberculi expuși pentru a descuraja insectele, ciupercile și animalele erbivore. Este, practic, sistemul imunitar chimic al plantei.</p>
                 <p>În cartof, acumularea ei crește mai ales când tuberculul este expus la lumină, începe să încolțească sau este deteriorat. Verdele cartofului vine de la clorofilă, dar acesta este și un semn că pot crește simultan nivelurile de glicoalcaloizi.</p>
               </div>
             </motion.article>
