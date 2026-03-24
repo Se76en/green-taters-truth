@@ -147,8 +147,7 @@ const Index = () => {
                 Solanina: cum apare, unde se găsește și de ce poate deveni periculoasă.
               </motion.h1>
               <motion.p variants={fadeUp} transition={{ duration: 0.6 }} className="max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-                Un site informativ despre glicoalcaloidul produs de plantele din familia Solanaceae,
-                cu accent pe cartofii verzi, toxicitate, biosinteză și surse bibliografice.
+                {"\n"}
               </motion.p>
               <motion.div variants={fadeUp} transition={{ duration: 0.5 }} className="flex flex-wrap gap-3">
                 <a href="#despre" className="rounded-full bg-primary px-5 py-3 text-sm font-bold text-primary-foreground hover:opacity-90">Citește explicația</a>
