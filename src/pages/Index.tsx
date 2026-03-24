@@ -5,7 +5,7 @@ import structureImage from "@/assets/solanine-structure.png";
 import greenTomatoesImg from "@/assets/green-tomatoes.jpg";
 import eggplantsImg from "@/assets/eggplants.jpg";
 import greenPotatoSproutsImg from "@/assets/green-potato-sprouts.jpg";
-import glycoalkaloidImg from "@/assets/glycoalkaloid-structure.jpg";
+
 import tomatineVsSolanineImg from "@/assets/tomatine-vs-solanine.png";
 import {
   AlertTriangle, BookOpen, ChevronDown, FlaskConical,
@@ -173,8 +173,8 @@ const Index = () => {
 
         {/* ── GLICOALCALOID ── */}
         <section id="glicoalcaloid" className="section-shell py-12 md:py-20">
-          <motion.div className="grid items-center gap-8 lg:grid-cols-2" initial="hidden" whileInView="visible" viewport={vp} variants={stagger}>
-            <motion.div variants={fadeRight} transition={{ duration: 0.6 }} className="space-y-5">
+          <motion.div initial="hidden" whileInView="visible" viewport={vp} variants={stagger} className="max-w-3xl">
+            <motion.div variants={fadeUp} transition={{ duration: 0.6 }} className="space-y-5">
               <SectionTitle icon={<FlaskConical className="h-6 w-6" />} title="Ce este un glicoalcaloid?" />
               <div className="space-y-4 text-lg leading-relaxed text-foreground/85">
                 <p>
@@ -187,10 +187,6 @@ const Index = () => {
                   Solanina și chaconina sunt cei mai cunoscuți glicoalcaloizi din cartofi, dar există sute de variante identificate în diferite specii de <em>Solanum</em>.
                 </p>
               </div>
-            </motion.div>
-            <motion.div variants={scaleIn} transition={{ duration: 0.6 }} className="soft-card overflow-hidden p-4 md:p-6">
-              <img src={glycoalkaloidImg} alt="Structura generală a unui glicoalcaloid — aglicon steroidal legat de un lanț zaharidic" className="w-full rounded-[1.5rem] border border-border bg-card object-cover" loading="lazy" width={1024} height={640} />
-              <p className="mt-3 text-center text-sm text-muted-foreground">Structura generală: aglicon steroidal + lanț glicozidic</p>
             </motion.div>
           </motion.div>
         </section>
