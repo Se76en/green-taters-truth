@@ -305,6 +305,11 @@ const Index = () => {
               </motion.article>
             ))}
           </motion.div>
+
+          <motion.div className="mt-8 soft-card overflow-hidden p-4 md:p-6" initial="hidden" whileInView="visible" viewport={vp} variants={scaleIn} transition={{ duration: 0.6 }}>
+            <img src={tomatineVsSolanineImg} alt="Comparație între structura chimică a α-Tomatinei (din tomate) și α-Solaninei (din cartofi), evidențiind diferența de aranjament al inelelor" className="w-full rounded-[1.5rem] border border-border bg-white object-contain" loading="lazy" />
+            <p className="mt-3 text-center text-sm text-muted-foreground">Comparație structurală: α-Tomatina (spirosolane) vs. α-Solanina (solanidane)</p>
+          </motion.div>
         </section>
 
         {/* ── TOXICITATE ── */}
