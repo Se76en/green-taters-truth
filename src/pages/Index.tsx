@@ -25,7 +25,7 @@ const sections = [
 const plants = [
   { name: "Cartoful", latin: "Solanum tuberosum", detail: "Sursa principală de expunere. Solanina se concentrează în coaja verde, germeni și în zonele expuse la lumină.", img: greenPotatoSproutsImg },
   { name: "Tomatele verzi", latin: "Solanum lycopersicum", detail: "Conțin tomatină, un alcaloid înrudit cu solanina, în cantități mai mari înainte de coacere.", img: greenTomatoesImg },
-  { name: "Vinetele", latin: "Solanum melongena", detail: "Pot conține alcaloizi steroizi înruditi, dar în general la niveluri mici.", img: eggplantsImg },
+  { name: "Vinetele", latin: "Solanum melongena", detail: "Pot conține alcaloizi steroizi înrudiți, dar în general la niveluri mici. Solanina se găsește mai ales în frunze și tulpină.", img: eggplantsImg },
 ];
 
 const cellMechanisms = [
