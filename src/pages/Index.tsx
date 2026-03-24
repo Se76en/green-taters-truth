@@ -4,7 +4,6 @@ import heroImage from "@/assets/green-potatoes-hero.jpg";
 import structureImage from "@/assets/solanine-structure.png";
 import greenTomatoesImg from "@/assets/green-tomatoes.jpg";
 import eggplantsImg from "@/assets/eggplants.jpg";
-import nightshadeImg from "@/assets/nightshade.jpg";
 import greenPotatoSproutsImg from "@/assets/green-potato-sprouts.jpg";
 import {
   AlertTriangle, BookOpen, ChevronDown, FlaskConical,
@@ -27,9 +26,6 @@ const plants = [
   { name: "Cartoful", latin: "Solanum tuberosum", detail: "Sursa principală de expunere. Solanina se concentrează în coaja verde, germeni și în zonele expuse la lumină.", img: greenPotatoSproutsImg },
   { name: "Tomatele verzi", latin: "Solanum lycopersicum", detail: "Conțin tomatină, un alcaloid înrudit cu solanina, în cantități mai mari înainte de coacere.", img: greenTomatoesImg },
   { name: "Pătlăgelele vinete", latin: "Solanum melongena", detail: "Pot conține alcaloizi steroizi înruditi, dar în general la niveluri mici.", img: eggplantsImg },
-  { name: "Zărnacica", latin: "Solanum dulcamara", detail: "Plantă toxică ce conține solanină și alți compuși asemănători în frunze și fructe.", img: nightshadeImg },
-  { name: "Lăcrămioarele negre", latin: "Solanum nigrum", detail: "Fructele necoapte și alte părți ale plantei pot avea concentrații relevante de glicoalcaloizi." },
-  { name: "Mătrăguna și Datura", latin: "Atropa belladonna / Datura stramonium", detail: "Nu sunt surse tipice de solanină, dar aparțin aceleiași familii și produc alți alcaloizi foarte toxici." },
 ];
 
 const cellMechanisms = [
