@@ -6,6 +6,7 @@ import greenTomatoesImg from "@/assets/green-tomatoes.jpg";
 import eggplantsImg from "@/assets/eggplants.jpg";
 import greenPotatoSproutsImg from "@/assets/green-potato-sprouts.jpg";
 import glycoalkaloidImg from "@/assets/glycoalkaloid-structure.jpg";
+import tomatineVsSolanineImg from "@/assets/tomatine-vs-solanine.png";
 import {
   AlertTriangle, BookOpen, ChevronDown, FlaskConical,
   Leaf, Menu, Microscope, Moon, Skull, Sun, X, Zap,
@@ -303,6 +304,11 @@ const Index = () => {
                 </div>
               </motion.article>
             ))}
+          </motion.div>
+
+          <motion.div className="mt-8 soft-card overflow-hidden p-4 md:p-6" initial="hidden" whileInView="visible" viewport={vp} variants={scaleIn} transition={{ duration: 0.6 }}>
+            <img src={tomatineVsSolanineImg} alt="Comparație între structura chimică a α-Tomatinei (din tomate) și α-Solaninei (din cartofi), evidențiind diferența de aranjament al inelelor" className="w-full rounded-[1.5rem] border border-border bg-white object-contain" loading="lazy" />
+            <p className="mt-3 text-center text-sm text-muted-foreground">Comparație structurală: α-Tomatina (spirosolane) vs. α-Solanina (solanidane)</p>
           </motion.div>
         </section>
 
